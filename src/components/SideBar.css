@@ -1,0 +1,55 @@
+/* SideBar 스타일 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 10;
+}
+
+
+
+.sidebar nav {
+  flex-grow: 1;  /* 🔴 nav가 가능한 너비를 모두 차지하도록 설정 */
+}
+
+.sidebar nav ul {
+  list-style: none;
+  display: flex;  /* 🔴 가로 정렬 */
+  justify-content: flex-end;  /* 🔴 오른쪽 끝으로 정렬 */
+  gap: 30px;  /* 항목 사이의 간격 */
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-left: 0; /* 🔴 각 리스트 항목을 오른쪽 정렬 */
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+  color: blue;
+}
+
+.login-btn {
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 40px;
+  margin-right: 100px;
+}
+.codein-logo-sidebar{
+  width :100px;
+  height: auto;
+
+}
