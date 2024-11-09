@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 function Login(){
     const [id,setId] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = () => {
         //로그인 로직
@@ -12,7 +14,7 @@ function Login(){
 
     const handleSignup = () => {
         //회원가입 로직
-        console.log('회원가입 페이지로 이동');
+        navigate('/register');
     };
 
     return (
@@ -20,13 +22,13 @@ function Login(){
             <h2>로그인</h2>
             <input 
               type = "text"
-              placeholder = "ID"
+              placeholder = "아이디"
               value = {id}
               onChange = {(e) => setId(e.target.value)}
             />
             <input
               type = "password"
-              placeholder = "PW"
+              placeholder = "비밀번호"
               value = {password}
               onChange = {(e) => setPassword}
             />
