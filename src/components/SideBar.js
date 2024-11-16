@@ -21,6 +21,7 @@ function SideBar() {
           <li><Link to="/project">PROJECT</Link></li>
           <li><Link to="/members">FOR MEMBERS</Link></li>
           <li><Link to="/recruit">RECRUIT</Link></li>
+          <li><Link to="/feedbacks">FEEDBACK</Link></li>
         </ul>
       </nav>
       <button className="login-btn" onClick={goToLogin}>LOGIN</button>

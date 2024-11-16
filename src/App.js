@@ -11,6 +11,7 @@ import Recruit from './pages/Recruit';
 import Members from './pages/Members';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Feedbacks from './pages/Feedbacks';
 
 function AppContent() {
   const location = useLocation(); // 현재 경로 가져오기
@@ -49,6 +50,7 @@ function AppContent() {
           <Route path="/recruit" element={<Recruit />} />
           <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Register/>} />
+          <Route path="/feedbacks" element={<Feedbacks/>} />
         </Routes>
       </div>
     </div>
