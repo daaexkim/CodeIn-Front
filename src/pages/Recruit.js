@@ -1,5 +1,5 @@
 import React from 'react';
-import './Page.css';  // 공통된 페이지 스타일 import
+import '../styles/Page.css';  // 공통된 페이지 스타일 import
 
 function Recruit() {
   return (

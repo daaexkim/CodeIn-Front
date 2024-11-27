@@ -1,0 +1,68 @@
+.feedback-item-container {
+    padding: 20px;
+    margin: 100px auto; /* 중앙 정렬 */
+    display: flex;
+    height: calc(var(--vh, 1vh) * 100);
+    height: 100vh;
+    flex-direction: column;
+    background-color: #000000;
+    color: #000000;
+    background-size: cover;
+    max-width: 600px; /* 컨테이너의 최대 가로 너비 설정 */
+}
+
+.feedback-item-input {
+    width: 80%; /* 🔴 가로 길이를 80%로 설정 */
+    max-width: 500px; /* 🔴 가로 최대 길이 설정 */
+    margin: 10px auto; /* 중앙 정렬 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feedback-item-textarea {
+    width: 80%; /* 🔴 가로 길이를 80%로 설정 */
+    max-width: 500px; /* 🔴 가로 최대 길이 설정 */
+    margin: 10px auto; /* 중앙 정렬 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 200px; /* 텍스트 박스 높이 */
+    resize: vertical;
+}
+
+
+
+.feedback-item-save-button,
+.feedback-item-back-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.feedback-item-save-button {
+    margin-right: 50px;
+    margin-top : 0px;
+    background-color: blue;
+    color: white;
+}
+
+.feedback-item-save-button:hover {
+    background-color: #0056b3;
+}
+
+.feedback-item-list-button {
+    background-color: #6c757d;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-left: 50px;
+    align-self: flex-start;
+    cursor: pointer;
+}
+
+.feedback-item-list-button:hover {
+    background-color: #5a6268;
+}
