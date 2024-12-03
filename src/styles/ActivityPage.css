@@ -1,0 +1,79 @@
+/* 전체 레이아웃 */
+.activity-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+  margin-top: 55px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* 왼쪽 사이드바 */
+.activity-sidebar {
+  flex: 1;
+  max-width: 250px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* 학기 선택 */
+.semester-form {
+  margin-bottom: 20px;
+}
+.semester-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+.semester-form select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* 오른쪽 메인 */
+.activity-main {
+  flex: 3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* 제목(동아리 활동 게시판) */
+.page-title {
+  margin-bottom: 40px;
+}
+
+/* 활동 카드 목록 */
+.activity-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /*두 열로 나누기*/
+  gap: 48px;
+}
+.activity-list > div {
+  width: 100%;
+  box-sizing: border-box; /*패딩과 보더를 포함해 너비 계산*/
+}
+
+/* 활동 카드 추가 버튼 */
+.add-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.add-button:hover {
+  background-color: #0056b3;
+}

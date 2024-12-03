@@ -14,6 +14,7 @@ import Register from "./pages/Register";
 import Feedback from "./components/members/feedback/Feedback";
 import FeedbackItem from "./components/members/feedback/FeedbackItem";
 import { FeedbackProvider } from "./contexts/FeedbackContext";
+import ActivityPage from "./pages/ActivityPage";
 
 function AppContent() {
   const location = useLocation();
@@ -52,6 +53,7 @@ function AppContent() {
           <Route path="/register" element={<Register />} />
           <Route path="/members/feedback" element={<Feedback />} />
           <Route path="/members/feedbackitem" element={<FeedbackItem />} />
+          <Route path="/members/activityPage" element={<ActivityPage />} />
         </Routes>
       </div>
     </div>
