@@ -55,7 +55,7 @@ function Members() {
         </div>
         <div
           className="members-box"
-          onClick={() => handleNavigation("/members/activityPage")}
+          onClick={() => handleNavigation("/members/activity")}
         >
           <h2>동아리 활동 게시판</h2>
           <ul>

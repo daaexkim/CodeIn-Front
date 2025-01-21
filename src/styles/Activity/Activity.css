@@ -1,0 +1,99 @@
+/* 전체 먼테이너 */
+.activity-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 10px auto;
+    margin-top: 55px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #000000;
+    gap: 20px;
+}
+  
+/* 왼쪽 사이드바 */
+.activity-sidebar {
+    flex: 1;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-width: 250px;
+    height: auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #000000;
+    gap: 20px;
+}
+
+/* 오른쪽 메인 */
+.activity-main {
+    flex: 3;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #000000;
+}
+  
+/* 제목(동아리 활동 게시판) */
+.page-title {
+    margin-bottom: 32px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+}
+  
+/* 활동 카드 목록 */
+.activity-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+}
+  
+/* 활동 카드 추가 버튼 */
+.add-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+.add-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #6a6a6a;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+}
+.add-button:hover {
+    background-color: #0056b3;
+}
+
+/* 페이지네이션 컨테이너 */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 20px;
+    gap: 6px;
+}
+
+.page-button {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #eee;
+    cursor: pointer;
+}
+.page-button.active {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: wheat
+}

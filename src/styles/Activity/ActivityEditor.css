@@ -1,0 +1,137 @@
+/* 에디터 전체 컨테이너 */
+.activity-editor-container {
+    margin-top: 20px;
+}
+
+.editor-header-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 12px;
+    gap: 2%;
+}
+.editor-header {
+    display: flex;
+    flex-direction: column;
+    width: 29%;
+}
+input, select {
+    padding: 8px;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+}
+#title {
+    width: 69%;
+    font-weight: 600;
+    font-size: 48px;
+}
+#file {
+    margin-left: 5px;
+    border: none;
+}
+
+/* 버튼 영역 */
+.editor-buttons {
+    width: 100%;
+}
+.editor-buttons button {
+    width: 50%;
+    height: 100%;
+    padding: 10px 16px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+}
+.editor-buttons .left-button {
+    background-color: #6a6a6a;
+}
+.editor-buttons .left-button:hover {
+    background-color: #ff5353;
+}
+.editor-buttons .right-button {
+    background-color: #ff5353;
+}
+.editor-buttons .right-button:hover {
+    background-color: #6a6a6a;
+}
+
+/* ReactQuill 에디터 */
+.quill-container {
+    overflow-y: auto;
+    min-height: 300px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* 이미지 업로드 */
+.image-upload-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 8px;
+}
+.image-upload-section label {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.image {
+    padding: 4px;
+    cursor: pointer;
+}
+.image:hover {
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+.image.selected {
+    border: 3px solid #28a745;
+}
+.image img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* ActivityEditor.css (마지막 쯤) */
+
+/* Quill 툴바(스노우 테마) 배경 & 아이콘 색상 */
+.ql-toolbar.ql-snow {
+    background-color: #333 !important;
+    border: 1px solid #ccc;
+  }
+  .ql-toolbar.ql-snow .ql-stroke {
+    stroke: #fff;
+  }
+  .ql-toolbar.ql-snow .ql-fill {
+    fill: #fff;
+  }
+  .ql-toolbar.ql-snow .ql-picker-item,
+  .ql-toolbar.ql-snow .ql-picker-label {
+    color: #fff;
+  }
+  
+  /* 에디터 본문 */
+  .ql-container.ql-snow {
+    background-color: #000; 
+    color: #fff;
+  }
+  .ql-editor {
+    min-height: 200px;
+    color: #fff; 
+  }
+  .ql-editor.ql-blank::before {
+    color: #aaa;
+  }
+  

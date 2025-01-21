@@ -1,0 +1,73 @@
+/* 학기 선택 */
+.semester-form {
+    margin-bottom: 20px;
+    background-color: #000000;
+    color: #ffffff;
+}
+.semester-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.semester-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* 카테고리 버튼 */
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 72px;
+}
+.category-buttons button {
+    width: 208px;
+    height: 103px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background-color: #acacac;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 32px;
+    cursor: pointer;
+}
+.category-buttons button:hover {
+    background-color: #687eb5;
+}
+.category-buttons .active {
+    background-color: #687eb5;
+    color: white;
+}
+
+/* 새 카테고리 추가 */
+.add-category {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+.add-category input {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 32px;
+}
+.add-category button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #28a745;
+    color: white;
+}
+.add-category button:hover {
+    background-color: #218838;
+}
