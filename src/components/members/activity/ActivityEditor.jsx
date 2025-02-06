@@ -74,6 +74,7 @@ const ActivityEditor = ({ activity, onSave, onCancel }) => {
       <Suspense fallback={<p>Loading Editor...</p>}>
         <ReactQuill
           theme="snow"
+          className="quill-container"
           value={content}
           onChange={handleChange}
           modules={modules}

@@ -1,0 +1,60 @@
+.notice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 70px 0;
+    padding: 20px;
+    background-color: #000000;
+    background-size: cover;
+    color: #ffffff;
+}
+
+.notice-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.main-container {
+    align-items: center;
+    width: 800px;
+    max-height: 800px;
+}
+
+/* 공지사항 작성 버튼과 관리자 on/off 버튼 */
+.writeAndAdmin button {
+    width: 100px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* 페이지네이션 컨테이너 */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 20px;
+    gap: 6px;
+}
+
+.page-button {
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #eee;
+    cursor: pointer;
+}
+.page-button.active {
+    border-color: #007bff;
+    background-color: #007bff;
+    color: wheat
+}

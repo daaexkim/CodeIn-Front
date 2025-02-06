@@ -1,15 +1,18 @@
-import React from "react";
+import React, {useContext} from "react";
+import { ActivityContext } from "../../../contexts/ActivityContext";
 import "../../../styles/Activity/Categories.css";
 
-function Categories({
-    categories,
-    setCategories,
-    selectedCategory,
-    setSelectedCategory,
-    semesters,
-    selectedSemester,
-    setSelectedSemester,
-}) {
+function Categories() {
+    const {
+        categories,
+        setCategories,
+        selectedCategory,
+        setSelectedCategory,
+        semesters,
+        selectedSemester,
+        setSelectedSemester,
+    } = useContext(ActivityContext);
+    
     // 새 카테고리 추가 핸들러
     const handleAddCategory = () => {
         const newCategoryName = prompt("새 카테고리 이름을 입력해주세요: ");

@@ -14,7 +14,10 @@ import Register from "./pages/Register";
 import Feedback from "./components/members/feedback/Feedback";
 import FeedbackItem from "./components/members/feedback/FeedbackItem";
 import { FeedbackProvider } from "./contexts/FeedbackContext";
+import { ActivityProvider } from "./contexts/ActivityContext";
 import Activity from "./components/members/activity/Activity";
+import { NoticeProvider } from "./contexts/NoticeContext";
+import Notice from "./components/members/notice/Notice";
 
 function AppContent() {
   const location = useLocation();
@@ -53,7 +56,22 @@ function AppContent() {
           <Route path="/register" element={<Register />} />
           <Route path="/members/feedback" element={<Feedback />} />
           <Route path="/members/feedbackitem" element={<FeedbackItem />} />
-          <Route path="/members/activity" element={<Activity />} />
+          <Route
+            path="/members/activity"
+            element={
+              <ActivityProvider>
+                <Activity />
+              </ActivityProvider>
+            }
+          />
+          <Route
+            path="/members/notice"
+            element={
+              <NoticeProvider>
+                <Notice />
+              </NoticeProvider>
+            }
+          />
         </Routes>
       </div>
     </div>
@@ -71,5 +89,4 @@ function App() {
     </FeedbackProvider>
   );
 }
-
 export default App;

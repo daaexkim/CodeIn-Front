@@ -1,0 +1,39 @@
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-width: 800px;
+    gap: 10px;
+}
+
+.editor-title {
+    max-width: 800px;
+    padding: 8px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    font-size: 32px;  
+}
+
+.react-quill {
+    overflow-y: hidden;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.button-container button {
+    width: 15%;
+    padding: 10px 0;
+    border-radius: 4px;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: large;
+    cursor: pointer;
+}

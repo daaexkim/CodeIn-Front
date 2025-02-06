@@ -1,0 +1,45 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+  
+.search-container input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 4px;
+}
+  
+.search-container button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+}
+
+.notice-table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+.notice-table th, .notice-table td {
+    padding: 8px;
+    border: 1px solid #fff;
+    text-align: center;
+}
+
+.notice-table th {
+    background-color: #000;
+    color: #fff;
+}
+
+span {
+    cursor: pointer;
+}

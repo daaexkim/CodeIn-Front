@@ -1,19 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import Categories from "./Categories";
 import ActivityCards from "./ActivityCards";
 import ActivityEditor from "./ActivityEditor";
+import { ActivityContext } from "../../../contexts/ActivityContext";
 import "../../../styles/Activity/Activity.css";
 
 
 function Activity() {
-  const [activities, setActivities] = useState([]);
-  
-  const [categories, setCategories] = useState(["전체", "프로젝트", "공모전", "언어 스터디"]);
-  const [selectedCategory, setSelectedCategory] = useState("전체");
-
-  const [semesters, setSemesters] = useState(["전체"]);
-  const [selectedSemester, setSelectedSemester] = useState("전체");
-
+  const {
+    activities,
+    setActivities,
+    categories,
+    selectedCategory,
+    selectedSemester,
+    decideSemester,
+  } = useContext(ActivityContext);
   const [isEditing, setIsEditing] = useState(false);
   const [editingActivity, setEditingActivity] = useState(null);
 
@@ -22,28 +23,16 @@ function Activity() {
   
   // 학기/카테고리 필터
   const filteredActivities = activities.filter((activity) => {
-    const decideSemester = (date) => {  
-      const year = new Date(date).getFullYear();
-      const month = new Date(date).getMonth() + 1;
-
-      const semesterKey =
-        month >= 3 && month <= 8
-          ? `${year}년 상반기`
-          : `${month >= 9 ? year : year - 1}년 하반기`;
-
-      if (semesterKey && !semesters.includes(semesterKey)) {
-        const newSemesters = [...semesters, semesterKey].sort().reverse();
-        const set = new Set(newSemesters);
-        setSemesters([...set]);
-      }
-      return semesterKey;
-    };
+    const semesterStart = decideSemester(activity.startDate)    
+    const semesterUpdate = decideSemester(activity.updateDate)    
     
     const matchSemester =
-      (selectedSemester === decideSemester(activity.startDate) || selectedSemester === decideSemester(activity.updateDate)) || selectedSemester === "전체";
+      selectedSemester === "전체" ||
+      selectedSemester === semesterStart ||
+      selectedSemester === semesterUpdate;
     const matchCategory =
-      selectedCategory === "전체" || selectedCategory === activity.category;
-    
+      selectedCategory === "전체" ||
+      selectedCategory === activity.category;
     return matchSemester && matchCategory;
   });
 
@@ -93,7 +82,9 @@ function Activity() {
           }
           return activity;
         });
-        return updatedActivities.sort((a, b) => (b.updateDate || 0) - (a.updateDate || 0));
+        return updatedActivities.sort(
+          (a, b) => (b.updateDate || 0) - (a.updateDate || 0)
+        );
       });
     } else {
       // 새로 추가
@@ -119,7 +110,7 @@ function Activity() {
   };
 
   // 에디터에서 취소할 때
-  const handleCancleEditing = () => {
+  const handleCancelEditing = () => {
     setIsEditing(false);
     setEditingActivity(null);
   };
@@ -133,15 +124,7 @@ function Activity() {
     <div className="activity-container">
       {/* 왼쪽 사이드바 */}
       <aside className="activity-sidebar">
-        <Categories
-          categories={categories}
-          setCategories={setCategories}
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-          semesters={semesters}
-          selectedSemester={selectedSemester}
-          setSelectedSemester={setSelectedSemester}
-        />
+        <Categories />
       </aside>
 
       {/* 오른쪽 메인 */}
@@ -154,7 +137,7 @@ function Activity() {
             activity={editingActivity}
             categories={categories.filter((category) => category !== "전체")}
             onSave={handleSaveActivity}
-            onCancel={handleCancleEditing}
+            onCancel={handleCancelEditing}
           />
         ) : (
           <>
