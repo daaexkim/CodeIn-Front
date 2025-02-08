@@ -5,25 +5,26 @@ body, html {
   font-family: 'Arial', sans-serif;
   overflow-x: hidden;
   height: 100%; 
-  background: #1f213a ;
+  background: #000000 ;
 }
 
 .app-container {
   height: calc(var(--vh, 1vh) * 100);
+  
 }
 
 .main-content {
   background: linear-gradient(to bottom, #000000 0%, #000000 100%);
   padding: 0;
+  
   margin: 0;
 }
 
 
 .main-container {
   height: 100%;
-  display: flex;
   flex-direction: column;
-  overflow-y: auto;
+
 }
 
 
@@ -77,6 +78,7 @@ body, html {
   margin : 0;
   overflow-x: hidden;
   overflow-y: hidden;
+  
 }
 
 

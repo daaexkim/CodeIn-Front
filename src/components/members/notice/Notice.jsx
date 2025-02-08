@@ -40,7 +40,7 @@ function Notice() {
             </div>
 
             {/* 공지사항 목록 또는 편집기*/}
-            <div className="main-container">
+            <div className="notice-main-container">
                 {isEditing ? <NoticeEditor /> : <NoticeList />}
             </div>
 

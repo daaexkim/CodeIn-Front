@@ -34,8 +34,10 @@
     background-color: #acacac;
     color: #ffffff;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 28px;
     cursor: pointer;
+    font-family: 'HakgyoansimPuzzleTTF-Outline';
+
 }
 .category-buttons button:hover {
     background-color: #687eb5;

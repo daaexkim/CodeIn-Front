@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../styles/Activity/ActivityCards.css";
+import "../../../styles/Activity/Activity.css";
 
 function ActivityCard({ activity, onClick }) {
   const { images, mainImageIndex, title, author } = activity;

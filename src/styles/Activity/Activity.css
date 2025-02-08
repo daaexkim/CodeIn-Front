@@ -44,11 +44,20 @@
     text-align: center;
 }
   
+
+@font-face {
+    font-family: 'HakgyoansimPuzzleTTF-Outline';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimPuzzleTTF-Outline.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* 활동 카드 목록 */
 .activity-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 24px;
+
 }
   
 /* 활동 카드 추가 버튼 */
@@ -56,6 +65,7 @@
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
+    
 }
 .add-button {
     padding: 12px 24px;
@@ -64,7 +74,7 @@
     background-color: #6a6a6a;
     color: #ffffff;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     cursor: pointer;
 }
 .add-button:hover {
@@ -78,6 +88,7 @@
     margin-top: 20px;
 }
 .pagination {
+    
     display: flex;
     justify-content: center;
     width: fit-content;
